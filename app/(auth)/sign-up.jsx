@@ -4,6 +4,7 @@ import { Link, router } from "expo-router";
 import FormField from "../../components/FormField";
 import CustomButton from "../../components/CustomButton";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { createUser } from "../../lib/appwrite";
 
 const SignUp = () => {
   const [form, setForm] = useState({
@@ -15,7 +16,7 @@ const SignUp = () => {
   const[isSubmitting, setIsSubmitting] = useState(false);
 
   const submit = () => {
-    console.log(form);
+    createUser();
   }
 
   return (
