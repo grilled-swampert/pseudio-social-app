@@ -4,6 +4,7 @@ import { View, Text, Image, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { images } from "../constants";
+import CustomButton from "../components/CustomButton";
 
 const Welcome = () => {
   return (
@@ -23,8 +24,8 @@ const Welcome = () => {
 
           <View className="relative mt-5">
             <Text className="text-3xl text-white font-bold text-center">
-              Discover Endless{"\n"}
-              Possibilities with{" "}
+              Share Your Endless{"\n"}
+              Life Stories with{" "}
               <Text className="text-secondary-200">Pseudio</Text>
             </Text>
 
@@ -36,9 +37,14 @@ const Welcome = () => {
           </View>
 
           <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
-            Where Creativity Meets Innovation: Embark on a Journey of Limitless
-            Exploration with Pseudio
+            Capture it. Upload it. Watch it again, and again—until it feels like you’ve lived it twice. Or maybe… never at all.          
           </Text>
+
+          <CustomButton
+            title="Continue with Email"
+            handlePress={() => router.push("/sign-in")}
+            containerStyles="w-full mt-7"
+          />
 
         </View>
       </ScrollView>
